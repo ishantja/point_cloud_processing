@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launch file -->
+
+<launch>
+    <!-- Defining the node and executable and publishing the output on terminal-->
+    <node name="point_cloud_processing_node" pkg="point_cloud_processing" type="point_cloud_processing_node" output="screen">
+        <!-- loading the parameters from yaml file during th runtime -->
+        <rosparam command="load" file="$(find point_cloud_processing)/config/point_cloud_processing.yaml"/>
+    </node>
+</launch>
